@@ -1,3 +1,6 @@
+# Import json so we can read model metric information from a JSON file
+import json
+
 # Import joblib so we can load the trained machine learning model
 import joblib
 
@@ -57,6 +60,16 @@ def home():
             "docs": "/docs"
         }
     }
+
+# Create a metrics route to show model information and performance
+@app.get("/metrics")
+def get_metrics():
+    # Open the saved model metrics JSON file
+    with open("models/model_metrics.json", "r") as file:
+        metrics = json.load(file)
+
+    # Return the metrics as a JSON response
+    return metrics
 
 
 # Helper function that turns probability into risk level

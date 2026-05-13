@@ -1,0 +1,28 @@
+{
+  "model_name": "CampusPath Course Success Model",
+  "model_type": "RandomForestClassifier",
+  "accuracy": 0.865,
+  "problem_type": "Binary Classification",
+  "target_label": "passed",
+  "target_meaning": {
+    "0": "At risk of struggling",
+    "1": "Likely to pass"
+  },
+  "features": [
+    "gpa",
+    "study_hours",
+    "attendance_rate",
+    "previous_math_grade",
+    "previous_cs_grade",
+    "credit_load",
+    "course_difficulty"
+  ],
+  "risk_thresholds": {
+    "low_risk": "success_probability >= 75%",
+    "medium_risk": "success_probability >= 50% and < 75%",
+    "high_risk": "success_probability < 50%"
+  },
+  "training_data_size": 1000,
+  "test_data_size": 200,
+  "notes": "Model trained on synthetic student data for portfolio and learning purposes."
+}
