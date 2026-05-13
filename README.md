@@ -325,6 +325,16 @@ This project demonstrates:
 
 ---
 
+## Live API
+
+The deployed CampusPath AI API is available at:
+
+https://campuspath-ai.onrender.com
+
+Interactive API documentation:
+
+https://campuspath-ai.onrender.com/docs
+
 # Author
 
 Shawn Watson
